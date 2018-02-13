@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>PlotWindow</class>
+ <widget class="QMainWindow" name="PlotWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>824</width>
+    <width>1024</width>
     <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>ELKA Node Info</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>20</y>
-      <width>801</width>
+      <width>991</width>
       <height>561</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="propertiesLabel">
          <property name="minimumSize">
           <size>
-           <width>300</width>
+           <width>100</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>300</width>
+           <width>200</width>
            <height>20</height>
           </size>
          </property>
@@ -59,42 +59,42 @@
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
          <item row="0" column="0">
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="idLabel">
            <property name="text">
             <string>ID:</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="idLabelEdit">
            <property name="text">
             <string>TestID 1</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="typeLabel">
            <property name="text">
             <string>Type:</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="typeLabelEdit">
            <property name="text">
             <string>Ground Station</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="batteryLabel">
            <property name="text">
             <string>Battery:</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="batteryLabelEdit">
            <property name="text">
             <string>87%</string>
            </property>
@@ -102,21 +102,24 @@
          </item>
         </layout>
        </item>
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       </item>
       </layout>
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
        <item row="1" column="2">
-        <widget class="PlotWidget" name="graphicsView_2"/>
+        <widget class="PlotWidget" name="bottomRight"/>
        </item>
        <item row="0" column="2">
-        <widget class="PlotWidget" name="graphicsView"/>
+        <widget class="PlotWidget" name="topRight"/>
        </item>
        <item row="1" column="0">
-        <widget class="PlotWidget" name="graphicsView_3"/>
+        <widget class="PlotWidget" name="bottomLeft"/>
        </item>
        <item row="0" column="0">
-        <widget class="PlotWidget" name="graphicsView_4"/>
+        <widget class="PlotWidget" name="topLeft"/>
        </item>
       </layout>
      </item>
@@ -128,7 +131,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>824</width>
+     <width>1024</width>
      <height>22</height>
     </rect>
    </property>
